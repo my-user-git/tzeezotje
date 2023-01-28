@@ -1,0 +1,93 @@
+
+.header-content {
+    &__menu-link {
+        transition: color ease-in-out .3s;
+
+        &:hover {
+            color: $gold7F;
+        }
+
+        &:focus {
+            color: $gold7F;
+        }
+    }
+
+    &__tel {
+        transition: color ease-in-out .3s;
+
+        &:hover {
+            color: $gold7F;
+        }
+
+        &:focus {
+            color: $gold7F;
+        }
+    }
+}
+
+.section-we {
+    &__button {
+        transition: background-color ease-in-out .3s, color ease-in-out .3s;
+    }
+
+    &__button:hover {
+        color: $dark-blue74;
+        background-color: $gold7F;
+    }
+
+    &__button:focus {
+        color: $dark-blue74;
+        background-color: $gold7F;
+    }
+
+    &__social-item {
+        cursor: pointer;
+        transition: color ease-in-out .3s, border ease-in-out .3s;
+
+        &:hover {
+            color: $gold7F;
+            border-color: $gold7F;
+        }
+
+        &:focus {
+            color: $gold7F;
+            border-color: $gold7F;
+        }
+    }
+}
+
+.section-contacts {
+    &__form {
+        &-button {
+            transition: background-color ease-in-out .3s, color ease-in-out .3s;
+        }
+
+        &-button:hover {
+            color: $dark-blue74;
+            background-color: $gold7F;
+        }
+
+        &-button:focus {
+            color: $dark-blue74;
+            background-color: $gold7F;
+        }
+    }
+}
+
+.footer-content {
+
+    &__social-item {
+        cursor: pointer;
+        transition: color ease-in-out .3s, border ease-in-out .3s;
+
+        &:hover {
+            color: $gold7F;
+            border-color: $gold7F;
+        }
+
+        &:focus {
+            color: $gold7F;
+            border-color: $gold7F;
+        }
+    }
+}
