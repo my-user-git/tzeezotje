@@ -3,6 +3,7 @@
 @import '_media.scss';
 // @import '_mixin.scss';
 @import '_ui-kit.scss';
+@import '_modal.scss';
 
 * {
     box-sizing: border-box;
@@ -152,6 +153,7 @@ input {
     }
 
     &__button {
+        position: relative;
         display: inline-flex;
         justify-self: flex-start;
         margin-left: -1px;
@@ -162,6 +164,7 @@ input {
         line-height: 24px;
         color: $white;
         background-color: $dark-blue74;
+        z-index: 1;
     }
 
     &__social {

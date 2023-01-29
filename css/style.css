@@ -439,6 +439,7 @@ input {
   align-items: center;
 }
 .section-we__button {
+  position: relative;
   display: inline-flex;
   justify-self: flex-start;
   margin-left: -1px;
@@ -449,6 +450,7 @@ input {
   line-height: 24px;
   color: #fff;
   background-color: #3A4574;
+  z-index: 1;
 }
 .section-we__social-item {
   display: inline-flex;
