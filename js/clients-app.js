@@ -104,7 +104,7 @@
     const response = await fetch('https://gorest.co.in/public/v2/users', {
       method: 'GET',
       headers: {
-        Authorization: 'Bearer 996eb087188d6e5a1c349d79a10381740ca478a65ed547f5b8a3d34332fe1f83',
+        Authorization: 'Bearer 6ce9a4ddb5701c006c2c36ae44efee6da462836bbb5cf1d5c01c748eadf37cfc',
         'Content-Type': 'application/json',
       },
     });
@@ -122,7 +122,7 @@
   //   const response = await fetch('https://gorest.co.in/public/v2/users/201031', {
   //     method: 'DELETE',
   //     headers: {
-  //       Authorization: 'Bearer 996eb087188d6e5a1c349d79a10381740ca478a65ed547f5b8a3d34332fe1f83',
+  //       Authorization: 'Bearer 6ce9a4ddb5701c006c2c36ae44efee6da462836bbb5cf1d5c01c748eadf37cfc',
   //       'Content-Type': 'application/json',
   //     },
 
@@ -140,7 +140,7 @@
     const response = await fetch('https://gorest.co.in/public/v2/users', {
       method: 'POST',
       headers: {
-        Authorization: 'Bearer 996eb087188d6e5a1c349d79a10381740ca478a65ed547f5b8a3d34332fe1f83',
+        Authorization: 'Bearer 6ce9a4ddb5701c006c2c36ae44efee6da462836bbb5cf1d5c01c748eadf37cfc',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
