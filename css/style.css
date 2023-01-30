@@ -301,6 +301,99 @@
   border-color: #D3B47F;
 }
 
+.section-form {
+  position: fixed;
+  display: flex;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(51, 51, 51, 0.6);
+  transition: opacity 0.3s ease-in-out;
+  transform-origin: top;
+}
+.section-form__heading {
+  margin-bottom: 30px;
+  font-family: "Poppins-Bold", "Arial, sans-serif";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: #D3B47F;
+}
+.section-form__form {
+  position: relative;
+  width: 400px;
+  padding: 20px 20px 50px 20px;
+  background-color: #fff;
+}
+.section-form__item {
+  position: relative;
+  margin-bottom: 15px;
+}
+.section-form__label {
+  font-family: "Poppins-Regular", "Arial, sans-serif";
+  font-weight: 500;
+  font-size: 20x;
+  line-height: 40px;
+  color: #000;
+}
+.section-form__error-label {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  font-family: "Poppins-Regular", "Arial, sans-serif";
+  font-weight: 500;
+  font-size: 14x;
+  line-height: 14px;
+  color: #D3B47F;
+}
+.section-form__input {
+  font-family: "Poppins-Regular", "Arial, sans-serif";
+  font-weight: 400;
+  font-size: 15x;
+  line-height: 40px;
+  color: #D3B47F;
+}
+.section-form__input::-moz-placeholder {
+  font-family: "Poppins-Regular", "Arial, sans-serif";
+  font-weight: 400;
+  font-size: 15x;
+  line-height: 40px;
+  color: #CCCCCC;
+}
+.section-form__input:-ms-input-placeholder {
+  font-family: "Poppins-Regular", "Arial, sans-serif";
+  font-weight: 400;
+  font-size: 15x;
+  line-height: 40px;
+  color: #CCCCCC;
+}
+.section-form__input::placeholder {
+  font-family: "Poppins-Regular", "Arial, sans-serif";
+  font-weight: 400;
+  font-size: 15x;
+  line-height: 40px;
+  color: #CCCCCC;
+}
+.section-form__button {
+  padding: 10px 40px;
+  font-family: "Poppins-Medium", "Arial, sans-serif";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #3A4574;
+}
+
+.open {
+  opacity: 1;
+  z-index: 2;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/clients-app.js" defer></script>
 
 </head>
 
@@ -80,7 +81,25 @@
                 </ul>
             </div>
         </section>
-
+        <section class="section-form">
+            <form action="#" class="section-form__form" id="section-form">
+                <!-- <input type="hidden" name="form_subject" value="Тема письма"> -->
+                <h2 class="section-form__heading">Registratie</h2>
+                <div class="section-form__item">
+                    <label class="section-form__label" for="form-name">Name</label>
+                    <input class="section-form__input" id="form-name" name="name" type="text"
+                        placeholder="Input your name" data-required="true" data-min-length="2" data-max-length="15"
+                        autocomplete="off">
+                </div>
+                <div class="section-form__item">
+                    <label class="section-form__label" for="form-email">Email</label>
+                    <input class="section-form__input" id="form-email" name="email" type="email"
+                        placeholder="Input your email" data-required="true" data-min-length="2" data-max-length="15"
+                        autocomplete="off">
+                </div>
+                <button class="section-form__button" id="send">Send</button>
+            </form>
+        </section>
         <section class="section-offer container">
             <ul class="section-offer__list">
                 <li class="section-offer__item">
@@ -329,17 +348,17 @@
             <form action="#" class="section-contacts__form">
                 <!-- <input type="hidden" name="form_subject" value="Тема письма"> -->
                 <div class="section-contacts__form-item">
-                    <label class="section-contacts__form-label" for="form-name">Name</label>
-                    <input class="section-contacts__form-input" id="form-name" name="name" type="text"
+                    <label class="section-contacts__form-label" for="name-contacts">Name</label>
+                    <input class="section-contacts__form-input" id="name-contacts" name="name" type="text"
                         placeholder="Input your name">
                 </div>
                 <div class="section-contacts__form-item">
-                    <label class="section-contacts__form-label" for="form-email">Email</label>
-                    <input class="section-contacts__form-input" id="form-email" name="email" type="email"
+                    <label class="section-contacts__form-label" for="email-contacts">Email</label>
+                    <input class="section-contacts__form-input" id="email-contacts" name="email" type="email"
                         placeholder="Input your email">
                 </div>
                 <div class="section-contacts__form-item">
-                    <label class="section-contacts__form-label" for="text">Speciale Request</label>
+                    <label class="section-contacts__form-label" for="request">Speciale Request</label>
                     <textarea class="section-contacts__form-input" name="text" id="request" cols="30" rows="3"
                         placeholder="Input your special request"></textarea>
                 </div>
@@ -386,7 +405,13 @@
     </footer>
     <script src="js/points.js"></script>
     <script src="js/sliders.js"></script>
-    <script src="js/modal_button.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script>
+        tippy('#button-we', {
+            content: 'Knop voor het verzenden van het formulier!',
+        });
+    </script>
 </body>
 
 </html>
