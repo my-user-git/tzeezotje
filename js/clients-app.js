@@ -103,6 +103,10 @@
 
     const response = await fetch('https://gorest.co.in/public/v2/users', {
       method: 'GET',
+      headers: {
+        Authorization: 'Bearer 996eb087188d6e5a1c349d79a10381740ca478a65ed547f5b8a3d34332fe1f83',
+        'Content-Type': 'application/json',
+      },
     });
 
     const getClientsList = await response.json();
@@ -110,6 +114,24 @@
 
     return getClientsList;
   }
+
+  // async function delClient() {
+
+  //   // удаляем
+
+  //   const response = await fetch('https://gorest.co.in/public/v2/users/201031', {
+  //     method: 'DELETE',
+  //     headers: {
+  //       Authorization: 'Bearer 996eb087188d6e5a1c349d79a10381740ca478a65ed547f5b8a3d34332fe1f83',
+  //       'Content-Type': 'application/json',
+  //     },
+
+  //   });
+  // }
+
+
+
+  // delClient();
 
   async function createNewClient(event) {
 
@@ -134,6 +156,9 @@
 
     const clientNew = await response.json();
     // })
+
+    getClients();
+
   }
 
   getClients();
