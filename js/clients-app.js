@@ -101,7 +101,7 @@
 
     // отправляем запрос на список всех клиентов
 
-    const response = await fetch('https://gorest.co.in/public/v2/users', {
+    const response = await fetch(GOREST_PATH, {
       method: 'GET',
       headers: {
         Authorization: 'Bearer 6ce9a4ddb5701c006c2c36ae44efee6da462836bbb5cf1d5c01c748eadf37cfc',
@@ -115,29 +115,28 @@
     return getClientsList;
   }
 
-  // async function delClient() {
+  async function delClient() {
 
-  //   // удаляем
+    // удаляем
 
-  //   const response = await fetch('https://gorest.co.in/public/v2/users/201031', {
-  //     method: 'DELETE',
-  //     headers: {
-  //       Authorization: 'Bearer 6ce9a4ddb5701c006c2c36ae44efee6da462836bbb5cf1d5c01c748eadf37cfc',
-  //       'Content-Type': 'application/json',
-  //     },
+    const response = await fetch('https://gorest.co.in/public/v2/users/203148', {
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Bearer 6ce9a4ddb5701c006c2c36ae44efee6da462836bbb5cf1d5c01c748eadf37cfc',
+        'Content-Type': 'application/json',
+      },
 
-  //   });
-  // }
+    });
+  }
 
 
-
-  // delClient();
+  delClient();
 
   async function createNewClient(event) {
 
     // создание клиента на сервере
 
-    const response = await fetch('https://gorest.co.in/public/v2/users', {
+    const response = await fetch(GOREST_PATH, {
       method: 'POST',
       headers: {
         Authorization: 'Bearer 6ce9a4ddb5701c006c2c36ae44efee6da462836bbb5cf1d5c01c748eadf37cfc',
@@ -151,14 +150,32 @@
       }),
     })
 
+    document.querySelector('.section-form__form').style.opacity = '0';
+    const $alertForm = document.createElement('div'),
+      $alertMessage = document.createElement('div');
+
+    $alertForm.setAttribute('id', 'message');
+    $alertForm.classList.add('section-form__form');
+    $alertMessage.classList.add('section-form__label');
+
+    $alertMessage.textContent = 'Wij hebben uw gegevens ontvangen';
+    $alertForm.style.textAlign = 'center';
+
+    $checkForm.before($alertForm);
+    $alertForm.append($alertMessage);
+
+
     event.reset();
-    document.querySelector('.section-form').classList.remove('open');
+
+    document.querySelector('.section-form').addEventListener('click', () => {
+      document.querySelector('.section-form').classList.remove('open');
+      document.getElementById('message').remove();
+      document.querySelector('.section-form__form').removeAttribute('style');
+    })
 
     const clientNew = await response.json();
     // })
-
     getClients();
-
   }
 
   getClients();
