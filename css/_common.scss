@@ -533,6 +533,7 @@ section-promotion__prev {
 /* section-contacts */
 
 .section-contacts {
+    position: relative;
     display: grid;
     grid-template-areas:
         "top-left top-right"

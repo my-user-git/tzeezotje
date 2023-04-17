@@ -364,13 +364,6 @@
   line-height: 40px;
   color: #CCCCCC;
 }
-.section-form__input:-ms-input-placeholder {
-  font-family: "Poppins-Regular", "Arial, sans-serif";
-  font-weight: 400;
-  font-size: 15x;
-  line-height: 40px;
-  color: #CCCCCC;
-}
 .section-form__input::placeholder {
   font-family: "Poppins-Regular", "Arial, sans-serif";
   font-weight: 400;
@@ -844,6 +837,7 @@ section-promotion__prev {
 
 /* section-contacts */
 .section-contacts {
+  position: relative;
   display: grid;
   grid-template-areas: "top-left top-right" "bottom-left bottom-right";
   grid-template-columns: 1fr minmax(auto, 670px);
@@ -960,13 +954,6 @@ section-promotion__prev {
   border: 1px solid #CCCCCC;
 }
 .section-contacts__form-input::-moz-placeholder {
-  font-family: "Poppins-Regular", "Arial, sans-serif";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #808080;
-}
-.section-contacts__form-input:-ms-input-placeholder {
   font-family: "Poppins-Regular", "Arial, sans-serif";
   font-weight: 400;
   font-size: 16px;
